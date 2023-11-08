@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>hands on QGIS</title>
+
+		<script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		
+	</head>
+	<style>
+		.data {
+			
+			background-image:url("pics/inforange.png"), url("pics/uniks.png"), url("pics/agt.gif");
+			background-size: 15%, 13%, 10%;
+			background-repeat: no-repeat;
+			background-position: top right, 	top left, 		top;
+			
+		}
+		source {
+			color: red;
+		}
+	</style>
+	<body>
+		<div class="reveal">
+			
+			<div class="slides">
+				<section data-markdown>
+					<textarea data-template>
+					## Hands on 
+					   
+					<img src="pics/QGIS_logo,_2017.svg" height="auto" weight="40%">
+                    </textarea>
+				</section>
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						## Projections
+						Why?
+						<!-- 3d to 2d -> Earth is round. Put a grid on it. A sphere can be described. Everything is fine -->
+						---
+						<img src="pics/pro0.png"  height="auto%" width="80%" >
+						<p style="color: grey; font-size: small;"> 
+						https://docs.qgis.org/3.4/en/_images/projection_families.png
+						</p>
+						
+						---
+						Problems will arise:
+						* Layers won't match up
+						* Distances won't be correct
+						* Circles turn to ellipses for no apparent reason
+						---
+						<!-- ### Geoid -->
+						The earth is round. Right?
+						
+						---
+						#### Geoid
+						<img src="pics/Gravitational_inhomogenity_of_Earth.png"  height="auto%" width="60%" >
+						---
+						#### Geoid
+						<img src="pics/orange.png"  height="auto%" width="60%" >
+						---
+						### Ellipsoid
+
+						<img src="pics/pro1.png"  height="auto%" width="48%" >
+						<img src="pics/pro2.png"  height="auto%" width="38%" >
+						---
+						### Choosing the right projection
+						<a href="epsg.io" target="blank">Cheat sheet</a>
+						</textarea>
+					</section>
+
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+						### Data models
+
+						<img src="pics/rasterVector.jpg"  height="auto%" width="20%" >
+						<img src="pics/data_models.png"  height="auto%" width="28%" >
+						
+						<p style="color: grey; font-size: small;"> 
+							https://spatialvision.com.au/blog-raster-and-vector-data-in-gis/ <br>
+							https://gsp.humboldt.edu/olm/Lessons/GIS/08%20Rasters/RasterToVector.html
+						
+						</p>
+						
+					</textarea>
+				</section>
+				
+				<section>
+					<section data-markdown style="height:100%; background-image: url('pics/background_vector.png'); background-repeat: no-repeat;"> 
+						<textarea data-template>
+						 Points
+						
+						 Lines
+
+						### Vector data
+
+						 Polygons
+						</textarea>
+					</section>
+					<section data-markdown>
+						<textarea data-template>
+							#### Vector attributes
+							<img src="pics/pump_coords.png"  height="auto" width="40%" >
+							<img src="pics/pumps_geom.png"  height="auto" width="46%" >
+						</textarea>
+					</section>
+				</section>
+				<section>
+					<section data-markdown >
+						<textarea data-template>
+						### Raster data
+						<img src="pics/raster_background.png" alt="">
+						---
+						#### Raster values
+						<img src="pics/raster_band.png" height="auto" width="60%">
+						<img src="pics/raster_value.png" height="auto" width="40%">
+						<img src="pics/raster_dataset.png" height="auto" width="19%">
+						---
+						#### Bands & Virtual raster
+						<img src="pics/bands.png" height="auto" width="30%">
+						<img src="pics/4-3-2.png" height="auto" width="30%">
+						<img src="pics/12-8a-4.png" height="auto" width="30%">
+						
+						rgb image (natural colors) --> bands 4,3,2; agriculture (highlight dense vegetation and monitor the health of crops) --> bands 11,8,2
+						</textarea>
+					</section>
+					<section>
+						<img-comparison-slider tabindex="0" class="rendered">
+							<img slot="first" width="60%" src="pics/rgb_may2023.png">
+							<img slot="second" width="60%" src="pics/rgb_Oct2023.png">
+					  </img-comparison-slider>
+					  May 2023 vs October 2023
+						<img-comparison-slider tabindex="0" class="rendered">
+							  <img slot="first" width="60%" src="pics/savi_May2023.png">
+							  <img slot="second" width="60%" src="pics/savi_Oct2023.png">
+						</img-comparison-slider>
+					</section>
+				</section>
+				<section data-markdown>
+					<textarea data-template>
+					### Final notes
+
+					
+					<a href="https://docs.qgis.org/3.28/en/docs/user_manual/index.html" target="_blank">Documentation</a>
+					---
+					#### Join the community!
+
+					
+					<a href="https://www.gisday.com/en-us/overview" target="_blank">GIS Day November 15th</a>
+
+					
+					<a href="https://www.crunchydata.com/community/events/postgis-day-2023" target="_blank">PostGIS Day November 16th</a>
+				</textarea>
+				</section>
+			</div>
+		</div>
+
+
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+		
+	</body>
+</html>
