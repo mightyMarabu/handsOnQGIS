@@ -21,12 +21,14 @@
 	<style>
 		.data {
 			
-			background-image:url("pics/inforange.png"), url("pics/uniks.png"), url("pics/agt.gif");
-			background-size: 15%, 13%, 10%;
+			
+			background-image:url("pics/slides_background.png");
+			background-size: 10%;
 			background-repeat: no-repeat;
-			background-position: top right, 	top left, 		top;
+			background-position: top right;
 			
 		}
+
 		source {
 			color: red;
 		}
@@ -34,7 +36,7 @@
 	<body>
 		<div class="reveal">
 			
-			<div class="slides">
+			<div class="slides data">
 				<section data-markdown>
 					<textarea data-template>
 					## Hands on 
@@ -132,8 +134,10 @@
 						<img src="pics/bands.png" height="auto" width="30%">
 						<img src="pics/4-3-2.png" height="auto" width="30%">
 						<img src="pics/12-8a-4.png" height="auto" width="30%">
-						
-						rgb image (natural colors) --> bands 4,3,2; agriculture (highlight dense vegetation and monitor the health of crops) --> bands 11,8,2
+						<p style="font-size: small;">
+						sentinel bands -- rgb image (natural colors)[4,3,2] --  
+						agriculture (highlight dense vegetation and monitor the health of crops)[11,8,2]
+						</p>
 						</textarea>
 					</section>
 					<section>
@@ -148,21 +152,23 @@
 						</img-comparison-slider>
 					</section>
 				</section>
-				<section data-markdown>
-					<textarea data-template>
-					### Final notes
+				<section>
+					<section data-markdown>
+						<textarea data-template>
+						### Final notes
 
-					
-					<a href="https://docs.qgis.org/3.28/en/docs/user_manual/index.html" target="_blank">Documentation</a>
-					---
-					#### Join the community!
+						
+						<a href="https://docs.qgis.org/3.28/en/docs/user_manual/index.html" target="_blank">Documentation</a>
+						---
+						#### Join the community!
 
-					
-					<a href="https://www.gisday.com/en-us/overview" target="_blank">GIS Day November 15th</a>
+						
+						<a href="https://www.gisday.com/en-us/overview" target="_blank">GIS Day November 15th</a>
 
-					
-					<a href="https://www.crunchydata.com/community/events/postgis-day-2023" target="_blank">PostGIS Day November 16th</a>
-				</textarea>
+						
+						<a href="https://www.crunchydata.com/community/events/postgis-day-2023" target="_blank">PostGIS Day November 16th</a>
+					</textarea>
+					</section>
 				</section>
 			</div>
 		</div>
