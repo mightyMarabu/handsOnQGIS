@@ -39,5 +39,8 @@ create point layer from table
     * calculate ndvi
     * build model for savi
     * change detection (CLOUDS)
+
+### publish report
+* 
     
 
