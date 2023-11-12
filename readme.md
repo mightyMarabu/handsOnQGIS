@@ -35,6 +35,7 @@ create point layer from table
 * virtual raster --> make sure to place every input into a single band
     * rgb image (natural colors) --> bands 4,3,2
     * agriculture (highlight dense vegetation and monitor the health of crops) --> bands 11,8,2
+    * [Cheet Sheet](https://gisgeography.com/sentinel-2-bands-combinations/)
 * analyse
     * calculate ndvi
     * build model for savi

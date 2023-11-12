@@ -94,20 +94,30 @@
 					</section>
 
 				</section>
+				<section>
 				<section data-markdown>
 					<textarea data-template>
 						### Data models
 
-						<img src="pics/rasterVector.jpg"  height="auto%" width="20%" >
-						<img src="pics/data_models.png"  height="auto%" width="28%" >
+						<img src="pics/rasterVector.jpg"  height="auto%" width="30%" >
+						<img src="pics/data_models.png"  height="auto%" width="42%" >
 						
 						<p style="color: grey; font-size: small;"> 
 							https://spatialvision.com.au/blog-raster-and-vector-data-in-gis/ <br>
 							https://gsp.humboldt.edu/olm/Lessons/GIS/08%20Rasters/RasterToVector.html
 						
 						</p>
+						---
 						
+						|  vector | vs. | raster |
+						| :--- | --- | ---: |
+						| vertices and paths higher geographic accuracy| |geo. accuracy dependent on grid size|
+						| vector manipulation algorithms are complex| |map algebra  is usually quick and easy to perform
+						| output is generally more aesthetically pleasing| |cell size contributes to graphic quality
+
+						</table>
 					</textarea>
+				</section>
 				</section>
 				
 				<section>
@@ -148,6 +158,9 @@
 						<p style="font-size: small;">
 						sentinel bands -- rgb image (natural colors)[4,3,2] --  
 						agriculture (highlight dense vegetation and monitor the health of crops)[11,8,2]
+						</p>
+						<p style="font-size: small;">
+						<a href="https://gisgeography.com/sentinel-2-bands-combinations/" target="_blank">cheat sheet</a>
 						</p>
 						</textarea>
 					</section>
